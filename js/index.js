@@ -1,11 +1,13 @@
-// Iteration 1: Names and Input
-const hacker1 ="Mortadelo" //drivers
+// ITERATION 1 - NAMES AND INPUT
+
+const hacker1 ="Mortadelo" //driver
 const hacker2 ="Filemon" //navigator
 
 console.log("The driver's name is " + hacker1);
 console.log("The navigator's name is " + hacker2);
 
-// Iteration 2: Conditionals
+// ITERATION 2 - CONDITIONALS
+
 function longestName(name1,name2) {
 	if(hacker1.length > hacker2.length) {
 		console.log("The driver has the longest name, it has " + hacker1.length + " characters")
@@ -15,7 +17,6 @@ function longestName(name1,name2) {
 		console.log("Wow, you both have equally long names, XX characters!")
 	}
 }
-
 longestName(hacker1,hacker2);
 
 // ITERATION 3 - LOOPS
@@ -52,7 +53,7 @@ function lexicographicOrder(name1,name2) {
 }
 lexicographicOrder(hacker1,hacker2);
 
-// BONUS 1
+// BONUS 1 - LOREM TEXT
 
 const loremText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sapien eros, 
 congue eu massa id, dignissim vestibulum mauris. Mauris mollis imperdiet euismod. 
@@ -95,7 +96,7 @@ function wordCount(text) {
 
   console.log(wordCount(loremText));
 
-  //count # times the Latin word "et" appears.
+//count # times the Latin word "et" appears.
 function countCharacter(text,character) {
 	const strWithoutSpecialChar = text.replace(/[^a-zA-Z ]/g, "") // Regex to delete special characters such as commas
 	const wordArray = strWithoutSpecialChar.split(" ") // Adding words in wordArray
@@ -111,7 +112,7 @@ function countCharacter(text,character) {
 }
 console.log(countCharacter(loremText,'et'));
 
-// BONUS 2 - Palindrom
+// BONUS 2 - PALINDROME
 
 const phraseToCheck = "A man, a plan, a canal, Panama!"
 
