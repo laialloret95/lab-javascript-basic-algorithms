@@ -107,3 +107,33 @@ function countCharacter(text,character) {
 	return count
 }
 console.log(countCharacter(text,'et'));
+
+// BONUS 2 - Palindrom
+
+const phraseToCheck = "A man, a plan, a canal, Panama!"
+
+
+function formatString(phrase) {
+	const lowerCase = phrase.toLocaleLowerCase()
+	const withoutSpecialCharAndSpaces = lowerCase.replace(/[^A-Z0-9]/ig, "") //delete special characters and spaces
+	return withoutSpecialCharAndSpaces
+}
+
+function reverseOrder(phrase) {
+	const formattedPhrase = formatString(phrase);
+	let reversedName = ''; 
+	for(i = formattedPhrase.length - 1; i >= 0; i--){
+		reversedName += formattedPhrase[i];
+	}
+	return reversedName
+}
+
+function palindrome(phrase) {
+	if (reverseOrder(phrase) === formatString(phrase)) {
+		console.log(`This phrase is a Palindrome!`);
+	} else {
+		console.log(`This phrase is not a Palindrome :(`)
+	}
+}
+
+console.log(palindrome(phraseToCheck));
