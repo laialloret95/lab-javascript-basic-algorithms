@@ -71,3 +71,39 @@ function WordCount(text) {
   console.log(WordCount(text));
 
   //count # times the Latin word "et" appears.
+ const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sapien eros, 
+            congue eu massa id, dignissim vestibulum mauris. Mauris mollis imperdiet euismod. 
+            Maecenas quis dapibus arcu. Cras diam risus, vehicula vitae viverra id, vehicula quis metus. 
+            Nulla facilisi. Cras eget felis id nisl sollicitudin rutrum. Nam ornare ipsum elit, 
+            eget tempus eros tempor in. Integer dictum ex a laoreet pretium.
+
+            Sed mattis vehicula mi, in feugiat leo ornare ut. Suspendisse pharetra aliquam leo eget semper. 
+            Donec vestibulum risus quis pretium laoreet. Maecenas ut magna leo. Pellentesque aliquet, 
+            ligula vitae condimentum gravida, erat justo sollicitudin ex, at lobortis nibh augue eu nulla. 
+            Curabitur lobortis, velit ut mollis pulvinar, magna lacus luctus sem, quis porttitor felis urna a dolor. Sed sollicitudin, urna quis ullamcorper porta, odio purus ornare libero, non malesuada nisi nisl non tortor. Sed eget vehicula ipsum. Vivamus sit amet mauris convallis, accumsan quam ac, luctus sem. Nam ac ipsum efficitur, blandit augue eu, interdum ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis pretium arcu id ipsum suscipit, ut tincidunt nulla tempus. Aliquam feugiat id augue et maximus. Nulla at bibendum magna.
+            
+            Etiam non faucibus elit. Orci varius natoque penatibus et magnis dis parturient montes, 
+            nascetur ridiculus mus. Mauris vitae erat sit amet eros iaculis condimentum non sed turpis. 
+            Ut blandit metus quis ligula interdum, vel tempor diam consectetur. Mauris dictum laoreet justo, 
+            ac molestie massa. Quisque at dui at nunc sollicitudin pulvinar. Phasellus vitae rhoncus lorem. 
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
+            Aliquam massa lacus, commodo at suscipit ac, laoreet scelerisque nulla. Vivamus sit amet enim at 
+            ipsum vestibulum efficitur. Nulla eleifend accumsan lorem, congue pharetra orci posuere sit amet. 
+            Vestibulum porttitor, nisi id placerat dapibus, augue lectus cursus risus, nec suscipit justo odio 
+            eget eros."
+
+function countCharacter(text,character) {
+	const strWithoutSpecialChar = text.replace(/[^a-zA-Z ]/g, "") // Regex to delete special characters such as commas
+	const wordArray = strWithoutSpecialChar.split(" ") // Adding words in wordArray
+
+	let count = 0;
+	for (let i = 0; i < wordArray.length; i++) {
+		let lowerCaseWord = wordArray[i].toLowerCase()
+		if (lowerCaseWord === (character)) {
+			count++;
+		}
+	}
+	return count
+}
+console.log(countCharacter(text,'et'));
